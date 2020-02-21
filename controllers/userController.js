@@ -1,5 +1,5 @@
 const getAllUsers=(req,res)=>{
-    console.log(req.requestHora)
+    console.log(req.requestHora);
     res.status(200).json({
         status:"Success"
     })
@@ -12,7 +12,7 @@ const getUserById=(req,res)=>{
         results:1,
 
     })
-}
+};
 const updateUser=(req,res)=>{
     res.status(200).json({
         status:"Success",
@@ -20,19 +20,19 @@ const updateUser=(req,res)=>{
             tour:"<Update tour here>"
         }
     })
-}
+};
 const deleteUser=(req,res)=>{
 
     res.status(204).json({
         status:"Success",
         data:null
     })
-}
+};
 const createUser=(req,res)=>{
     //console.log(req.body);
         res.status(201).json({
             status:"Success"
         })
     
-}
-module.exports={createUser,getAllUsers,getUserById,deleteUser,updateUser}
+};
+module.exports={createUser,getAllUsers,getUserById,deleteUser,updateUser};

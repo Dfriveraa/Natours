@@ -1,10 +1,11 @@
 const express=require('express');
 const router=express.Router();
 const tourController=require('./../controllers/tourController');
+router.param('id', tourController.checkID);
+
+router.get('/:id',tourController.getTour);
 
 router.get('/',tourController.getAllTours);
-
-router.get('/:id',tourController.getTourById);
 
 router.patch('/:id',tourController.updateTour);
 
